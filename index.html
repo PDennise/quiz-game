@@ -21,23 +21,40 @@
 </head>
 
 <body>
-    <section>
-        <img src="assets/images/logo.png" alt="Quiz Game">
+    <!-- Username Screen -->
+    <section id="usernameScreen" class="container">
+        <img src="assets/images/logo.png" alt="Quiz Game" class="logo">
         <h1>Quiz Game</h1>
         <p>Let's make your day fun!</p>
-        <input type="text" id="username" placeholder="Enter your username">
+        <input type="text" id="username" placeholder="Enter your username" required>
         <br>
-        <button type="button" class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
+        <button type="button" class="btn start-button" onclick="startQuiz()">Start Quiz</button>
     </section>
-    <section>
+    
+    <!-- Question Screen -->
+    <section id="question-container" class="container hidden">
         <div class="container">
-            <h5>Question</h5>
-            <p>Answer 1</p>
-            <p>Answer 2</p>
-            <p>Answer 3</p>
-            <p>Answer 4</p>
-
+            <h3 id="question-text">Question</h3>
+            <div id="answer" class="answer-group">
+                <label class="answer">
+                    <input type="radio" name="answer" value="0">
+                    Answer 1
+                </label>
+                <label class="answer">
+                    <input type="radio" name="answer" value="1">
+                    Answer 2
+                </label>
+                <label class="answer">
+                    <input type="radio" name="answer" value="2">
+                    Answer 3
+                </label>
+                <label class="answer">
+                    <input type="radio" name="answer" value="3">
+                    Answer 4
+                </label>
+            </div>
         </div>
+        <button type="button" class="btn btn-primary" onclick="checkAnswer()">Submit</button>
     </section>
 
 
@@ -55,4 +72,5 @@
 <footer>
 
 </footer>
+
 </html>
