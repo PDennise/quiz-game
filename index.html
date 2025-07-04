@@ -28,7 +28,7 @@
         <p>Let's make your day fun!</p>
         <input type="text" id="username" placeholder="Enter your username" required>
         <br>
-        <button type="button" class="btn start-button" onclick="startQuiz()">Start Quiz</button>
+        <button type="button" class="btn start-button" id="startButton">Start Quiz</button>
     </section>
 
     <!-- Question Screen -->
@@ -55,11 +55,11 @@
             </div>
         </div>
         <div>
-            <button type="button" class="btn btn-submit" onclick="checkAnswer()">Submit</button>
+            <button type="button" class="btn btn-submit">Submit</button>
         </div>
         <div>
             <p id="feedback"></p>
-            <button type="button" class="btn btn-next" onclick="nextQuestion()">Next</button>
+            <button type="button" id="nextButton" class="btn btn-next hidden">Next</button>
         </div>
 
         <!-- Score Secreen -->
@@ -67,7 +67,7 @@
             <h2>Finished!</h2>
             <p id="scoreText"></p>
             <p>Thank you!</p>
-            <button type="button" class="btn btn-rate" onclick="rateGame()">Rate the Game</button>
+            <button type="button" id="rateButton" class="btn btn-rate hidden">Rate the Game!</button>
         </div>
     </section>
 
@@ -83,8 +83,5 @@
         crossorigin="anonymous"></script>
 
 </body>
-<footer>
-
-</footer>
 
 </html>
