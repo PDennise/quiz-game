@@ -10,25 +10,46 @@ body {
 
 }
 
-/* Username Screen */
-
-.start-button {
+/* Button Section */
+.start-button,
+.btn-submit,
+.btn-next,
+.btn-rate {
 background-color: #4b5ae4;
 color: white;
 border-radius: 1rem;
 }
 
+.radio-btn {
+    margin-left: 5px;
+}
 #usernameScreen {
     display: grid;
     justify-items: center;
 }
 
+container {
+    display:flex;
 
+   
+}
+
+.answer-group {
+    display: flex;
+    flex-direction: column;
+    border: 2rem;
+
+
+
+}
 
 .answer {
     display: flex;
-    border: 2rem;
+    border: 1px solid;
     border-color: black;
-    border-radius: 0, 5rem;
+    border-radius: 0.5rem;
+    gap: 10px;
+    margin: 1px;
+    width: auto;
 
 }

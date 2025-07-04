@@ -30,31 +30,45 @@
         <br>
         <button type="button" class="btn start-button" onclick="startQuiz()">Start Quiz</button>
     </section>
-    
+
     <!-- Question Screen -->
     <section id="question-container" class="container hidden">
         <div class="container">
             <h3 id="question-text">Question</h3>
             <div id="answer" class="answer-group">
                 <label class="answer">
-                    <input type="radio" name="answer" value="0">
+                    <input type="radio" class="radio-btn" name="answer" value="0">
                     Answer 1
                 </label>
                 <label class="answer">
-                    <input type="radio" name="answer" value="1">
+                    <input type="radio" class="radio-btn" name="answer" value="1">
                     Answer 2
                 </label>
                 <label class="answer">
-                    <input type="radio" name="answer" value="2">
+                    <input type="radio" class="radio-btn" name="answer" value="2">
                     Answer 3
                 </label>
                 <label class="answer">
-                    <input type="radio" name="answer" value="3">
+                    <input type="radio" class="radio-btn" name="answer" value="3">
                     Answer 4
                 </label>
             </div>
         </div>
-        <button type="button" class="btn btn-primary" onclick="checkAnswer()">Submit</button>
+        <div>
+            <button type="button" class="btn btn-submit" onclick="checkAnswer()">Submit</button>
+        </div>
+        <div>
+            <p id="feedback"></p>
+            <button type="button" class="btn btn-next" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <!-- Score Secreen -->
+        <div class="container hidden" id="resultScreen">
+            <h2>Finished!</h2>
+            <p id="scoreText"></p>
+            <p>Thank you!</p>
+            <button type="button" class="btn btn-rate" onclick="rateGame()">Rate the Game</button>
+        </div>
     </section>
 
 
