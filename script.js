@@ -1,32 +1,35 @@
 let startButton;
+let score = 0;
+
 
 document.addEventListener("DOMContentLoaded", () => {
     startButton = document.getElementById('startButton')
     const nextButton = document.getElementById('nextButton')
     const rateButton = document.getElementById('rateButton')
+    const submitButton = document.getElementById('submitButton');
 
     startButton.addEventListener('click', startQuiz)
     nextButton.addEventListener("click", nextQuestion);
     rateButton.addEventListener("click", rateGame);
+    submitButton.addEventListener("click", checkAnswer);
 });
 
 function startQuiz() {
     const username = document.getElementById("username").value;
-    document.getElementById("introSection").classList.add("hidden");
 
     if (!username.trim()) {
         alert("Please enter a username!");
         return;
     }
 
-    console.log("Username:", username)
-    console.log("Starting");
+    document.getElementById("introSection").classList.add("hidden");
     startButton.classList.add("hidden")
-
     document.getElementById("usernameScreen").classList.add("hidden");
     document.getElementById("question-container").classList.remove("hidden");
 
-
+    console.log("Username:", username)
+    console.log("Starting");
+    
     showQuestion();
 }
 
@@ -34,7 +37,7 @@ function startQuiz() {
 function showQuestion() {
     const question = questions[currentQuestionIndex];
     const questionText = document.getElementById("question-text");
-    questionText.textContent = questions[currentQuestionIndex].question;
+    const answerContainer = document.getElementById("answer");
 
     questionText.textContent = question.question;
 
@@ -57,6 +60,7 @@ function showQuestion() {
         answerContainer.appendChild(label);
     });
 
+    // Reset button and feedback
     document.getElementById("nextButton").classList.add("hidden");
     document.getElementById("feedback").textContent = "";
 }
@@ -68,6 +72,8 @@ function nextQuestion() {
     } else {
         document.getElementById("question-container").classList.add("hidden");
         document.getElementById("rateScreen").classList.remove("hidden");
+        document.getElementById("scoreText").textContent = `You got ${score} out of ${questions.length} correct!`;
+        document.getElementById("rateButton").classList.remove("hidden");
     }
 }
 
@@ -78,12 +84,13 @@ function checkAnswer() {
     if (!selected) {
         alert("Please select an answer.");
         return;
-}
+    }
 
-const answerIndex = parseInt(selected.value);
+    const answerIndex = parseInt(selected.value);
     const correct = questions[currentQuestionIndex].answers[answerIndex].correct;
 
     if (correct) {
+        score++;
         feedback.textContent = "Correct!";
         feedback.style.color = "green";
     } else {
