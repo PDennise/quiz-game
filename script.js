@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function startQuiz() {
     const username = document.getElementById("username").value;
+    document.getElementById("username").classList.add("hidden")
 
     if (!username.trim()) {
         alert("Please enter a username!");
@@ -29,7 +30,7 @@ function startQuiz() {
 
     console.log("Username:", username)
     console.log("Starting");
-    
+
     showQuestion();
 }
 

@@ -10,6 +10,12 @@ body {
 
 }
 
+h1,
+p {
+    display: flex;
+    justify-content: center
+}
+
 /* Button Section */
 .start-button,
 .btn-submit,
@@ -27,6 +33,7 @@ body {
 
 .radio-btn {
     margin-left: 5px;
+    
 }
 
 #usernameScreen {
