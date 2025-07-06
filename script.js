@@ -12,27 +12,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function startQuiz() {
     const username = document.getElementById("username").value;
+    document.getElementById("introSection").classList.add("hidden");
 
-    console.log("Username:", username)
     if (!username.trim()) {
         alert("Please enter a username!");
         return;
     }
 
+    console.log("Username:", username)
     console.log("Starting");
     startButton.classList.add("hidden")
-    nextQuestion()
 
     document.getElementById("usernameScreen").classList.add("hidden");
     document.getElementById("question-container").classList.remove("hidden");
+
 
     showQuestion();
 }
 
 
 function showQuestion() {
+    const question = questions[currentQuestionIndex];
     const questionText = document.getElementById("question-text");
     questionText.textContent = questions[currentQuestionIndex].question;
+
+    questionText.textContent = question.question;
+
+    // Clean answers
+    answerContainer.innerHTML = "";
+
+    // Show answers
+    question.answers.forEach((answer, index) => {
+        const label = document.createElement("label");
+        label.classList.add("answer");
+
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "answer";
+        input.value = index;
+        input.classList.add("radio-btn");
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(answer.text));
+        answerContainer.appendChild(label);
+    });
+
+    document.getElementById("nextButton").classList.add("hidden");
+    document.getElementById("feedback").textContent = "";
 }
 
 function nextQuestion() {
@@ -46,14 +72,27 @@ function nextQuestion() {
 }
 
 function checkAnswer() {
-    const userAnswer = document.getElementById("answer").value;
-    const correct = questions[currentQuestionIndex].answer.toLowerCase() === userAnswer.toLowerCase();
+    const selected = document.querySelector('input[name="answer"]:checked');
+    const feedback = document.getElementById("feedback");
+
+    if (!selected) {
+        alert("Please select an answer.");
+        return;
+}
+
+const answerIndex = parseInt(selected.value);
+    const correct = questions[currentQuestionIndex].answers[answerIndex].correct;
 
     if (correct) {
-        alert("Correct!");
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
     } else {
-        alert("Incorrect!");
+        feedback.textContent = "Incorrect!";
+        feedback.style.color = "red";
     }
+
+    // Show next button after answer checked
+    document.getElementById("nextButton").classList.remove("hidden");
 }
 
 function rateGame() {
@@ -73,7 +112,7 @@ const questions = [
         answers: [
             { text: 'Toronto', correct: false },
             { text: 'Vancouver', correct: false },
-            { text: 'Ottawa', correct: true }, 
+            { text: 'Ottawa', correct: true },
             { text: 'Montreal', correct: false }
         ]
     },
@@ -83,7 +122,7 @@ const questions = [
         answers: [
             { text: 'Pablo Picasso', correct: false },
             { text: 'Vincent van Gogh', correct: false },
-            { text: 'Michelangelo', correct: false }, 
+            { text: 'Michelangelo', correct: false },
             { text: 'Leonardo da Vinci', correct: true }
         ]
     },
@@ -93,7 +132,7 @@ const questions = [
         answers: [
             { text: 'Earth', correct: false },
             { text: 'Jupiter', correct: true },
-            { text: 'Saturn', correct: false }, 
+            { text: 'Saturn', correct: false },
             { text: 'Mars', correct: false }
         ]
     },
@@ -103,7 +142,7 @@ const questions = [
         answers: [
             { text: 'Oxygen', correct: true },
             { text: 'Gold', correct: false },
-            { text: 'Osmium', correct: false }, 
+            { text: 'Osmium', correct: false },
             { text: 'Iron', correct: false }
         ]
     },
@@ -113,13 +152,8 @@ const questions = [
         answers: [
             { text: '1905', correct: false },
             { text: '1912', correct: true },
-            { text: '1920', correct: false }, 
+            { text: '1920', correct: false },
             { text: '1898', correct: false }
         ]
     },
 ]
-
-function showQuestion() {
-    const questionText = document.getElementById("question-text");
-    questionText.textContent = questions[currentQuestionIndex].question;
-}
