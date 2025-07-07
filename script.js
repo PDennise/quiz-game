@@ -41,6 +41,8 @@ function showQuestion() {
 
     questionText.textContent = question.question;
 
+    startTimer();
+
     // Clean answers
     answerContainer.innerHTML = "";
 
@@ -74,25 +76,32 @@ function nextQuestion() {
         document.getElementById("rateScreen").classList.remove("hidden");
         document.getElementById("scoreText").textContent = `You got ${score} out of ${questions.length} correct!`;
         document.getElementById("rateButton").classList.remove("hidden");
+        document.getElementById("tryAgain").classList.remove("hidden");
     }
 }
 
-function checkAnswer() {
+function checkAnswer(auto = false) {
     const selected = document.querySelector('input[name="answer"]:checked');
     const feedback = document.getElementById("feedback");
 
-    if (!selected) {
+    stopTimer();
+
+    if (!selected && !auto) {
         alert("Please select an answer.");
         return;
     }
 
-    const answerIndex = parseInt(selected.value);
-    const correct = questions[currentQuestionIndex].answers[answerIndex].correct;
+    let answerIndex = selected? parseInt(selected.value): -1;
+    let correctAnswerIndex = questions[currentQuestionIndex].answers.findIndex(a => a.correct);
+    isCorrect = (answerIndex === correctAnswerIndex);
 
-    if (correct) {
+    if (isCorrect) {
         score++;
         feedback.textContent = "Correct!";
         feedback.style.color = "green";
+    } else if (auto && !selected) {
+        feedback.textContent = "Time's up! No answer selected.";
+        feedback.style.color = "orange";
     } else {
         feedback.textContent = "Incorrect!";
         feedback.style.color = "red";
@@ -132,6 +141,41 @@ document.getElementById("tryAgain").addEventListener("click", () => {
     document.getElementById("question-container").classList.remove("hidden");
     showQuestion();
 });
+
+let timerInterval;
+let timeLeft = 10; // each questions - 10 seconds
+
+function startTimer() {
+    timeLeft = 10;
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = `Time left: ${timeLeft}s`;
+
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = `Time left: ${timeLeft}s`;
+
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            autoSubmitAnswer();
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+}
+
+function autoSubmitAnswer() {
+    const feedback = document.getElementById("feedback");
+    const selected = document.querySelector('input[name="answer"]:checked');
+
+    if (!selected) {
+        feedback.textContent = "Time's up! No answer selected.";
+        feedback.style.color = "orange";
+    }
+
+    checkAnswer(true);
+}
 
 let currentQuestionIndex = 0;
 
