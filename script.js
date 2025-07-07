@@ -1,5 +1,6 @@
 let startButton;
 let score = 0;
+let username;
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,9 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function startQuiz() {
     const username = document.getElementById("username").value;
-    const logo = document.getElementById("logo");
     document.getElementById("username").classList.add("hidden")
-    document.getElementById("logo").classList.add;
 
     if (!username.trim()) {
         alert("Please enter a username!");
@@ -27,7 +26,6 @@ function startQuiz() {
 
     document.getElementById("introSection").classList.add("hidden");
     startButton.classList.add("hidden")
-    document.getElementById("usernameScreen").classList.add("hidden");
     document.getElementById("question-container").classList.remove("hidden");
 
     console.log("Username:", username)
@@ -35,7 +33,6 @@ function startQuiz() {
 
     showQuestion();
 }
-
 
 function showQuestion() {
     const question = questions[currentQuestionIndex];
@@ -101,6 +98,20 @@ function checkAnswer() {
         feedback.style.color = "red";
     }
 
+    const allLabels = document.querySelectorAll(".answer");
+    const allInputs = document.querySelectorAll('input[name="answer"]');
+
+    allInputs.forEach((input, idx) => {
+        input.disabled = true; // Other options will be passived
+        const label = allLabels[idx];
+
+        if (questions[currentQuestionIndex].answers[idx].correct) {
+            label.classList.add("correct-answer");
+        } else if (parseInt(input.value) === answerIndex) {
+            label.classList.add("wrong-answer");
+        }
+    });
+
     // Show next button after answer checked
     document.getElementById("nextButton").classList.remove("hidden");
 }
@@ -113,6 +124,14 @@ function rateGame() {
         alert("Please select a rating.");
     }
 }
+
+document.getElementById("tryAgain").addEventListener("click", () => {
+    score = 0;
+    currentQuestionIndex = 0;
+    document.getElementById("rateScreen").classList.add("hidden");
+    document.getElementById("question-container").classList.remove("hidden");
+    showQuestion();
+});
 
 let currentQuestionIndex = 0;
 
