@@ -93,7 +93,7 @@ function checkAnswer(auto = false) {
 
     let answerIndex = selected? parseInt(selected.value): -1;
     let correctAnswerIndex = questions[currentQuestionIndex].answers.findIndex(a => a.correct);
-    isCorrect = (answerIndex === correctAnswerIndex);
+    let isCorrect = (answerIndex === correctAnswerIndex);
 
     if (isCorrect) {
         score++;
