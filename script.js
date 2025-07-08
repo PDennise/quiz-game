@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.getElementById('nextButton')
     const rateButton = document.getElementById('rateButton')
     const submitButton = document.getElementById('submitButton');
-    const username = document.getElementById('username');
+    username = document.getElementById('username');
 
     startButton.addEventListener('click', startQuiz)
     nextButton.addEventListener("click", nextQuestion);
@@ -57,7 +57,8 @@ function showQuestion() {
     });
 
     // Reset button and feedback
-    document.getElementById("nextButton").classList.add("hidden");
+    document.getElementById("nextButton").classList.add("hidden"); // Show Submit
+    document.getElementById("submitButton").classList.remove("hidden"); // 
     document.getElementById("feedback").textContent = "";
 }
 
@@ -116,7 +117,8 @@ function checkAnswer(auto = false) {
     });
 
     // Show next button after answer checked
-    document.getElementById("nextButton").classList.remove("hidden");
+     document.getElementById("submitButton").classList.add("hidden"); // Hide Submit
+     document.getElementById("nextButton").classList.remove("hidden"); // Show Next
 }
 
 function rateGame() {
