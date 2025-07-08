@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.getElementById('nextButton')
     const rateButton = document.getElementById('rateButton')
     const submitButton = document.getElementById('submitButton');
+    const username = document.getElementById('username');
 
     startButton.addEventListener('click', startQuiz)
     nextButton.addEventListener("click", nextQuestion);
@@ -16,16 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function startQuiz() {
-    const username = document.getElementById("username").value;
-    document.getElementById("username").classList.add("hidden")
 
-    if (!username.trim()) {
-        alert("Please enter a username!");
-        return;
-    }
-
-    document.getElementById("introSection").classList.add("hidden");
     startButton.classList.add("hidden")
+    document.getElementById("introSection").classList.add("hidden");
     document.getElementById("question-container").classList.remove("hidden");
 
     console.log("Username:", username)
