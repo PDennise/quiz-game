@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game</title>
 
@@ -47,33 +47,32 @@
             <p id="feedback"></p>
             <button type="button" id="nextButton" class="btn btn-next hidden">Next</button>
         </div>
-
-        <!-- Score Secreen -->
+    </section>
+    <!-- Score Secreen -->
+    <section>
         <div class="container hidden" id="rateScreen">
             <h2>Finished!</h2>
             <p id="scoreText"></p>
             <p>Thank you!</p>
-            <input type="text" id="username" placeholder="Enter your username" required>
-            <button id="tryAgain" class="btn hidden">Try Again</button>
-
+            <input type="text" id="username" placeholder="Enter your username" required />
+        </div>
+        <div>
             <label><input type="radio" name="rating" value="5" /> 5</label>
             <label><input type="radio" name="rating" value="4" /> 4</label>
             <label><input type="radio" name="rating" value="3" /> 3</label>
-            <button type="button" id="rateButton" class="btn btn-rate hidden">Rate the Game!</button>
+            <label><input type="radio" name="rating" value="3" /> 2</label>
+            <label><input type="radio" name="rating" value="3" /> 1</label>
+
+            <button id="tryAgain" class="btn hidden">Try Again</button>
+            <button type="button" id="rateButton" class="btn btn-rate hidden">
+                Rate the Game!
+            </button>
         </div>
     </section>
-
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
