@@ -10,11 +10,18 @@ body {
 
 }
 
-h1,
-p {
+h1 {
     display: flex;
     justify-content: center;
     font-family: 'Russo One', sans-serif;
+    margin-bottom: 30px;
+}
+
+/* Introduction Section */
+h2,
+h3,
+p {
+  text-align: center;
 }
 
 /* Button Section */
