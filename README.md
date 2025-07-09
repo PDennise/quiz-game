@@ -7,3 +7,13 @@ Features (Planned)
 - Visual feedback for correct and wrong answers
 - Username input at the end
 - Immediate feedback after each question
+
+Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Demo
+
+You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
+
