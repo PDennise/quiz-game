@@ -44,6 +44,17 @@ p {
     
 }
 
+#tryAgain {
+    background-color: #f95f5f;
+    color: white;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
 #usernameScreen {
     display: grid;
     justify-items: center;
