@@ -1,16 +1,18 @@
+// jshint esversion: 6
+
 let startButton;
 let score = 0;
 let username;
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    startButton = document.getElementById('startButton')
-    const nextButton = document.getElementById('nextButton')
-    const rateButton = document.getElementById('rateButton')
+    startButton = document.getElementById('startButton');
+    const nextButton = document.getElementById('nextButton');
+    const rateButton = document.getElementById('rateButton');
     const submitButton = document.getElementById('submitButton');
     username = document.getElementById('username');
 
-    startButton.addEventListener('click', startQuiz)
+    startButton.addEventListener('click', startQuiz);
     nextButton.addEventListener("click", nextQuestion);
     rateButton.addEventListener("click", rateGame);
     submitButton.addEventListener("click", checkAnswer);
@@ -18,11 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function startQuiz() {
 
-    startButton.classList.add("hidden")
+    startButton.classList.add("hidden");
     document.getElementById("introSection").classList.add("hidden");
     document.getElementById("question-container").classList.remove("hidden");
 
-    console.log("Username:", username)
+    console.log("Username:", username);
     console.log("Starting");
 
     showQuestion();
@@ -225,4 +227,4 @@ const questions = [
             { text: '1898', correct: false }
         ]
     },
-]
+];
