@@ -8,6 +8,7 @@ Features (Planned)
 - Username input at the end
 - Immediate feedback after each question
 
+
 Technologies Used
 - HTML
 - CSS
@@ -17,3 +18,10 @@ Technologies Used
 
 You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
 
+
+How to Play
+You will see one question at a time.
+Select your answer and click the Submit button.
+Click Next to move to the next question.
+After all questions, you will see your score and can enter your username.
+Ready? Let’s get started!
