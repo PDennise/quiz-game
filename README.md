@@ -38,6 +38,11 @@ The application is organized as follows:
 - JavaScript (ES6)  
 - *(Optional)* Bootstrap 
 
+## 🚀 Getting Started
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PDennise/quiz-game.git
+
 You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
 
 
