@@ -42,15 +42,13 @@ The application is organized as follows:
 1. Clone the repository:
    ```bash
    git clone https://github.com/PDennise/quiz-game.git
-
+2. Open the project folder:
+    ```bash
+    cd quiz-game
 You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
+3. Open index.html in your browser to start playing the quiz.
 
 
-How to Play
-You will see one question at a time.
-Select your answer and click the Submit button.
-Click Next to move to the next question.
-After all questions, you will see your score and can enter your username.
-Ready? Let’s get started!
-
-IMAGES of Quiz Game
+👩‍💻 Author
+Deniz Pandar
+Project development and design
