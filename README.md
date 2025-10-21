@@ -25,12 +25,18 @@ The application is organized as follows:
 - **style.css** — Visual design and responsive styling  
 - **assets/** — Images, icons, or other static resources  
 
-Technologies Used
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- Demo
+## ✅ Features
+- Clean and simple user interface  
+- One question displayed at a time  
+- “Next” button to move through questions  
+- Score calculated and shown at the end  
+- Planned: player name input and leaderboard  
+
+## 🛠 Technologies Used
+- HTML5  
+- CSS3  
+- JavaScript (ES6)  
+- *(Optional)* Bootstrap 
 
 You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
 
