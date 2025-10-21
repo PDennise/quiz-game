@@ -5,11 +5,10 @@
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
 The main goal is to combine learning and fun through a clean and responsive interface.
 
-Features (Planned)
-- Score tracking system
-- Visual feedback for correct and wrong answers
-- Username input at the end
-- Immediate feedback after each question
+### Objectives
+- Create an easy-to-use and accessible interface  
+- Implement a simple but effective quiz logic  
+- Demonstrate practical use of front-end web technologies  
 
 
 Technologies Used
