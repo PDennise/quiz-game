@@ -10,6 +10,10 @@ The main goal is to combine learning and fun through a clean and responsive inte
 - Implement a simple but effective quiz logic  
 - Demonstrate practical use of front-end web technologies  
 
+### Target Audience
+- Anyone who enjoys trivia games  
+- Beginners learning web development  
+- Users looking for a lightweight, browser-based game  
 
 Technologies Used
 - HTML
