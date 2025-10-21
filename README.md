@@ -15,6 +15,16 @@ The main goal is to combine learning and fun through a clean and responsive inte
 - Beginners learning web development  
 - Users looking for a lightweight, browser-based game  
 
+## 🎨 Design
+The interface follows a minimalist and user-friendly design philosophy. The layout is clean, responsive, and optimized for both desktop and mobile devices.
+
+## 🧱 Project Structure
+The application is organized as follows:
+- **index.html** — Main game page and start screen  
+- **script.js** — Game logic, scoring system, and interactions  
+- **style.css** — Visual design and responsive styling  
+- **assets/** — Images, icons, or other static resources  
+
 Technologies Used
 - HTML
 - CSS
