@@ -1,6 +1,5 @@
-# quiz-game
-Quiz Game is a fun and easy-to-use online quiz app that challenges your knowledge across a wide range of subjects.
-
+## 🧠 Project Overview
+**Quiz Game** is a web-based trivia app designed to test users’ knowledge through multiple-choice questions. Players answer each question, move to the next one, and see their final score at the end. In future updates, users will be able to enter their name and save their results.
 
 Features (Planned)
 - Score tracking system
