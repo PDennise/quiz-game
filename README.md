@@ -22,6 +22,8 @@ The main goal is to combine learning and fun through a clean and responsive inte
 ## 🎨 Design
 The interface follows a minimalist and user-friendly design philosophy. The layout is clean, responsive, and optimized for both desktop and mobile devices.
 
+![design](/assets/images/Screenshot%202025-10-22%20at%2011.50.10.png)
+
 ## 🧱 Project Structure
 The application is organized as follows:
 - **index.html** — Main game page and start screen  
