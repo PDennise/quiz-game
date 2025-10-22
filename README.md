@@ -45,8 +45,9 @@ The application is organized as follows:
 2. Open the project folder:
     ```bash
     cd quiz-game
-You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
 3. Open index.html in your browser to start playing the quiz.
+
+You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
 
 # Credits
 ### Content
