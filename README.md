@@ -48,7 +48,24 @@ The application is organized as follows:
 You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
 3. Open index.html in your browser to start playing the quiz.
 
+# Credits
+### Content
+- Home page text: Google Fonts.
+- Instructions on how to implement form validation on the Sign Up page was taken from: [Specific YouTube Tutorial](https://youtu.be/AAC0QJGaDhw?si=GgXThI845GZXqI1V)
+- Social media icons: [Font Awesome](https://fontawesome.com/)
 
-👩‍💻 Author
+### Resources & Assistance
+- README structure and formatting inspired by:
+    
+    - [Horizon Photo Repository](https://github.com/Ri-Dearg/horizon-photo/blob/main/README.md)
+    
+    - [Code Institute README Template](https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md)
+    
+    - Additional support and content assistance provided by **ChatGPT (OpenAI)**.
+
+### Media
+- The images used on the portfolio page are from Open Source site.
+
+### 👩‍💻 Author
 Deniz Pandar
 Project development and design
