@@ -58,8 +58,6 @@ You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz
 # Credits
 ### Content
 - Home page text: Google Fonts.
-- Instructions on how to implement form validation on the Sign Up page was taken from: [Specific YouTube Tutorial](https://youtu.be/AAC0QJGaDhw?si=GgXThI845GZXqI1V)
-- Social media icons: [Font Awesome](https://fontawesome.com/)
 
 ### Resources & Assistance
 - README structure and formatting inspired by:
