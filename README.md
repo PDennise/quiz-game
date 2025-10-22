@@ -1,3 +1,7 @@
+# Quiz Game
+
+![device images](/assets/images/Screenshot%202025-10-22%20at%2011.45.57.png)
+
 ## 🧠 Project Overview
 **Quiz Game** is a web-based trivia app designed to test users’ knowledge through multiple-choice questions. Players answer each question, move to the next one, and see their final score at the end. In future updates, users will be able to enter their name and save their results.
 
