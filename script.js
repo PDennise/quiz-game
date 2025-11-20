@@ -68,10 +68,17 @@ function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showQuestion();
+        // Finished screen elements hidden on the screen
     } else {
         document.getElementById("question-container").classList.add("hidden");
         document.getElementById("rateScreen").classList.remove("hidden");
-        document.getElementById("scoreText").textContent = `You got ${score} out of ${questions.length} correct!`;
+        document.getElementById("finishedTitle").classList.remove("hidden");
+        const scoreText = document.getElementById("scoreText");
+        scoreText.textContent = `You got ${score} out of ${questions.length} correct!`;
+        scoreText.classList.remove("hidden");
+        document.getElementById("thankYou").classList.remove("hidden");
+        document.getElementById("username").classList.remove("hidden");
+        document.getElementById("ratingGroup").classList.remove("hidden");
         document.getElementById("rateButton").classList.remove("hidden");
         document.getElementById("tryAgain").classList.remove("hidden");
     }
