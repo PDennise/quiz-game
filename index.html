@@ -54,20 +54,21 @@
             <button type="button" class="btn btn-submit" id="submitButton">Submit</button>
         </div>
         <div>
-            <p id="feedback"></p>
             <button type="button" id="nextButton" class="btn btn-next hidden">Next</button>
         </div>
+        <p id="feedback"></p>
+
     </section>
     <!-- Score Secreen -->
     <section class="container hidden" id="rateScreen">
         <div class="rate-wrapper text-center">
-            <h2 id="FinishedTitle" class="hidden">Finished!</h2>
-            <p id="scoreText" class=" hidden"></p>
+            <h2 id="finishedTitle" class="hidden">Finished!</h2>
+            <p id="scoreText" class="hidden"></p>
             <p id="thankYou" class="hidden">Thank you!</p>
-            <input type="text" id="username" class="form-control mx-auto mb-3" placeholder="Enter your username"
+            <input type="text" id="username" class="form-control mx-auto mb-3 hidden" placeholder="Enter your username"
                 required />
 
-            <div class="rating-group mb-3">
+            <div id="ratingGroup" class="rating-group mb-3 hidden">
                 <label><input type="radio" name="rating" value="5" /> 5</label>
                 <label><input type="radio" name="rating" value="4" /> 4</label>
                 <label><input type="radio" name="rating" value="3" /> 3</label>
