@@ -113,7 +113,7 @@ h3#question-text {
 
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #rateScreen {
