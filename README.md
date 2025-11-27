@@ -95,6 +95,21 @@ quiz‑game/
 ├── script.js          # Game logic (questions, timer, navigation)   
 └── README.md          # Project documentation (this file)  
 
+---
+
+## UX / Design & Wireframes
+
+- Clean and minimalistic UI — only necessary information visible at each stage
+- Responsive layout for both desktop and mobile using CSS / media queries
+- Clear navigation flow: Start → Quiz → Submit/Next → Score → Restart/Home
+- Minimal distractions: during quiz only question, answers, timer and controls visible
+
+
+Wireframes and mockups used during design:
+
+(I will add at the last)
+
+---
 
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
