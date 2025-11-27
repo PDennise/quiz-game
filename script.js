@@ -200,6 +200,17 @@ function autoSubmitAnswer() {
     checkAnswer(true);
 }
 
+function resetGame() {
+    currentQuestionIndex = 0;
+    score = 0;
+
+    document.getElementById("rateScreen").classList.add("hidden");
+    document.getElementById("question-container").classList.remove("hidden");
+    document.getElementById("game-controls").style.display = "none";
+
+    showQuestion();
+}
+
 let currentQuestionIndex = 0;
 
 const questions = [
