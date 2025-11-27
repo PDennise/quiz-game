@@ -111,6 +111,31 @@ Wireframes and mockups used during design:
 
 ---
 
+## Testing & Validation
+
+### Manual Test Cases
+
+| # | Step Description                       | Expected Result                              | Status |
+| - | -------------------------------------- | -------------------------------------------- | ------ |
+| 1 | Load page                              | Intro / start screen visible                 | ✅      |
+| 2 | Click “Start Quiz”                     | First question appears; timer starts         | ✅      |
+| 3 | Submit correct answer                  | Feedback “Correct!”, Next button appears     | ✅      |
+| 4 | Submit incorrect answer                | Feedback “Incorrect!”, Next button appears   | ✅      |
+| 5 | Change questions until end             | Final score & rating screen appears          | ✅      |
+| 6 | Without selecting answer, click Submit | Alert message or time‑up feedback (no crash) | ✅      |
+| 7 | Use “Start Again”                      | Quiz resets to first question                | ✅      |
+| 8 | Use “Go Home Page”                     | Returns to start screen                      | ✅      |
+
+### Validator Results
+
+HTML5: ✅ Valid markup, passes W3C HTML validator
+
+CSS3: ✅ No major issues; responsive layout works on various screen sizes
+
+JavaScript (ES6): ✅ No console errors; works across modern browsers
+
+---
+
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
 The main goal is to combine learning and fun through a clean and responsive interface.
