@@ -69,6 +69,21 @@ Or (if you have a simple static server), run:
     
 and open http://localhost:3000 in browser (optional).
 
+---
+
+## Usage
+
+1. Open the application (index.html) in a browser.
+2. Click Start Quiz to begin.
+3. For each question:
+    - Choose an answer
+    - Click Submit
+    - See feedback (Correct / Incorrect)
+    - Click Next to move to the next question
+4. At the end: view your score, optionally enter your username and rate the game.
+5. Use Start Again or Go Home Page to restart or return to main screen.
+
+---
 
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
