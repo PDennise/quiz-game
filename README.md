@@ -23,6 +23,18 @@
 
 ---
 
+## Features
+
+- Presents one question at a time with multiple‑choice answers  
+- Built‑in timer for each question  
+- Submit and Next buttons to control flow  
+- Feedback on correct / incorrect answers  
+- Final score calculation and display  
+- “Start Again” and “Go Home Page” controls to restart the quiz or return to start  
+- Responsive design (works on desktop and mobile)  
+
+---
+
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
 The main goal is to combine learning and fun through a clean and responsive interface.
