@@ -85,6 +85,17 @@ and open http://localhost:3000 in browser (optional).
 
 ---
 
+## Project Structure
+
+quiz‑game/
+├── index.html         # Main HTML page and UI structure   
+├── assets/            # Images, favicon, other static assets  
+│   ├── css/           # style.css and related styling files  
+│   └── images/        # screenshots, logo, etc.
+├── script.js          # Game logic (questions, timer, navigation)   
+└── README.md          # Project documentation (this file)  
+
+
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
 The main goal is to combine learning and fun through a clean and responsive interface.
