@@ -136,6 +136,19 @@ JavaScript (ES6): ✅ No console errors; works across modern browsers
 
 ---
 
+## Deployment
+
+The project is deployed via **GitHub Pages**. The steps to deploy:
+
+1. Commit and push your code to GitHub repository.
+2. In repository settings → Pages → choose main branch as source.
+3. Wait a few minutes — your site will be live at https://<username>.github.io/quiz-game/
+
+
+Alternatively, you can deploy on any static hosting service (Netlify, Vercel, etc.) by pointing to index.html.
+
+---
+
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
 The main goal is to combine learning and fun through a clean and responsive interface.
