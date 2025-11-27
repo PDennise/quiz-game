@@ -35,6 +35,12 @@
 
 ---
 
+## Demo
+
+Live demo available at: [https://pdennise.github.io/quiz-game/](https://pdennise.github.io/quiz-game/)
+
+---
+
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
 The main goal is to combine learning and fun through a clean and responsive interface.
