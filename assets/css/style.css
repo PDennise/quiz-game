@@ -44,6 +44,43 @@ p {
     
 }
 
+/* Game controls container */
+#game-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;      
+}
+
+/* General button style */
+#game-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Restart button color */
+#restart-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+/* Home button color */
+#home-btn {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+
+/* Hover effect */
+#game-controls button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
 #tryAgain {
     background-color: #f95f5f;
     color: white;
@@ -112,7 +149,7 @@ h3#question-text {
 }
 
 
-.hidden {
+.hidden {   
     display: none !important;
 }
 
@@ -151,4 +188,15 @@ h3#question-text {
   .btn-next {
     width: 100%;
   }
+}
+
+@media (max-width: 480px) {
+    #game-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #game-controls button {
+        width: 100%;    
+    }
 }
