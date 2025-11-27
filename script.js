@@ -42,6 +42,9 @@ function startQuiz() {
 }
 
 function showQuestion() {
+    document.getElementById("question-container").classList.remove("hidden");
+    document.getElementById("game-controls").style.display = "block";
+    
     const question = questions[currentQuestionIndex];
     const questionText = document.getElementById("question-text");
     const answerContainer = document.getElementById("answer");
