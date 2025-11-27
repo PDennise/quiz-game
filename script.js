@@ -132,11 +132,18 @@ function checkAnswer(auto = false) {
 
 function rateGame() {
     const rating = document.querySelector('input[name="rating"]:checked');
-    if (rating) {
-        alert("Thanks for rating us " + rating.value + " stars!");
-    } else {
+    const usernameValue = username.value.trim();
+
+    if (!rating) {
         alert("Please select a rating.");
     }
+
+    if (!usernameValue) {
+        alert("Please enter your username.");
+        return;
+    }
+
+    alert("Thanks, " + usernameValue + "! You rated us " + rating.value + " stars!");
 }
 
 document.getElementById("tryAgain").addEventListener("click", () => {
