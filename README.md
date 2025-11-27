@@ -1,9 +1,27 @@
-# Quiz Game
+<div align="center">
+  <h4> QUIZ GAME </h4>
+</div>
 
 ![device images](/assets/images/Screenshot%202025-10-22%20at%2011.45.57.png)
 
-## 🧠 Project Overview
-**Quiz Game** is a web-based trivia app designed to test users’ knowledge through multiple-choice questions. Players answer each question, move to the next one, and see their final score at the end. In future updates, users will be able to enter their name and save their results.
+
+[Quiz Game](https://pdennise.github.io/quiz-game/) is a web-based trivia app designed to test users’ knowledge through multiple-choice questions. Players answer each question, move to the next one, and see their final score at the end. In future updates, users will be able to enter their name and save their results.
+
+## Table of Contents  
+- [Features](#features)     
+- [Demo](#demo)  
+- [Getting Started](#getting-started)  
+- [Usage](#usage)  
+- [Project Structure](#project-structure)  
+- [UX / Design & Wireframes](#ux--design--wireframes)  
+- [Testing & Validation](#testing--validation)  
+- [Deployment](#deployment)  
+- [Screenshots](#screenshots)  
+- [Future Improvements](#future-improvements)  
+- [Credits & Acknowledgments](#credits--acknowledgments)  
+- [Author](#author)  
+
+---
 
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
