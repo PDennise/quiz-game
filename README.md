@@ -41,6 +41,35 @@ Live demo available at: [https://pdennise.github.io/quiz-game/](https://pdennise
 
 ---
 
+## Getting Started
+
+### Prerequisites
+
+No special requirements — just a modern browser. If you want to run the project locally, you need:
+
+- Node.js & npm (only if you later add build tools, but not required now)  
+- Or simply a file browser / web server
+
+---
+
+### Installation & Running Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PDennise/quiz-game.git
+2. Open the project folder:
+    ```bash
+    cd quiz-game
+3. Open index.html in your browser to start playing the quiz.
+
+
+Or (if you have a simple static server), run:
+
+        npx serve
+    
+and open http://localhost:3000 in browser (optional).
+
+
 ## 🎯 Project Purpose
 This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
 The main goal is to combine learning and fun through a clean and responsive interface.
@@ -79,17 +108,6 @@ The application is organized as follows:
 - CSS3  
 - JavaScript (ES6)  
 - *(Optional)* Bootstrap 
-
-## 🚀 Getting Started
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/PDennise/quiz-game.git
-2. Open the project folder:
-    ```bash
-    cd quiz-game
-3. Open index.html in your browser to start playing the quiz.
-
-You can try the live demo here: [Quiz Game Demo](https://pdennise.github.io/quiz-game/)
 
 # Credits
 ### Content
