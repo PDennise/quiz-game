@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitButton = document.getElementById('submitButton');
     const restartBtn = document.getElementById('restart-btn');
     const homeBtn = document.getElementById('home-btn');
-    username = document.getElementById('username');
+    username = document.getElementById('username') || null;
 
     startButton.addEventListener('click', startQuiz);
     nextButton.addEventListener("click", nextQuestion);
@@ -34,6 +34,7 @@ function startQuiz() {
     startButton.classList.add("hidden");
     document.getElementById("introSection").classList.add("hidden");
     document.getElementById("question-container").classList.remove("hidden");
+    document.getElementById("game-controls").style.display = "none";
 
     console.log("Username:", username);
     console.log("Starting");
@@ -104,12 +105,17 @@ function checkAnswer(auto = false) {
 
     stopTimer();
 
-    if (!selected && !auto) {
-        alert("Please select an answer.");
-        return;
+    if (!selected) {
+        if(auto) {
+            feedback.textContent = "Time's up! You didn't select an answer.";
+             feedback.style.color = "orange";
+        } else {
+            alert("Please select an answer before submitting!");
+            return;
     }
+}
 
-    let answerIndex = selected ? parseInt(selected.value) : -1;
+    let answerIndex = parseInt(selected.value);
     let correctAnswerIndex = questions[currentQuestionIndex].answers.findIndex(a => a.correct);
     let isCorrect = (answerIndex === correctAnswerIndex);
 
@@ -117,9 +123,6 @@ function checkAnswer(auto = false) {
         score++;
         feedback.textContent = "Correct!";
         feedback.style.color = "green";
-    } else if (auto && !selected) {
-        feedback.textContent = "Time's up! No answer selected.";
-        feedback.style.color = "orange";
     } else {
         feedback.textContent = "Incorrect!";
         feedback.style.color = "red";
