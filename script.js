@@ -211,6 +211,18 @@ function resetGame() {
     showQuestion();
 }
 
+function goHome() {
+    // Hide Quiz Screen
+    document.getElementById("question-container").classList.add("hidden");
+    document.getElementById("rateScreen").classList.add("hidden");
+
+    // Show Home Page
+    document.getElementById("introSection").classList.remove("hidden");
+    startButton.classList.remove("hidden");
+
+    document.getElementById("game-controls").style.display = "none";
+}
+
 let currentQuestionIndex = 0;
 
 const questions = [
