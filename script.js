@@ -10,12 +10,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.getElementById('nextButton');
     const rateButton = document.getElementById('rateButton');
     const submitButton = document.getElementById('submitButton');
+    const restartBtn = document.getElementById('restart-btn');
+    const homeBtn = document.getElementById('home-btn');
     username = document.getElementById('username');
 
     startButton.addEventListener('click', startQuiz);
     nextButton.addEventListener("click", nextQuestion);
     rateButton.addEventListener("click", rateGame);
     submitButton.addEventListener("click", checkAnswer);
+
+    // Restart and Home buttons
+    restartBtn.addEventListener('click', () => {
+        resetGame();    // Function to restart the game
+    });
+
+    homeBtn.addEventListener('click', () => {
+        goHome();      // Function to return to the home page
+    });
 });
 
 function startQuiz() {
@@ -95,7 +106,7 @@ function checkAnswer(auto = false) {
         return;
     }
 
-    let answerIndex = selected? parseInt(selected.value): -1;
+    let answerIndex = selected ? parseInt(selected.value) : -1;
     let correctAnswerIndex = questions[currentQuestionIndex].answers.findIndex(a => a.correct);
     let isCorrect = (answerIndex === correctAnswerIndex);
 
@@ -126,8 +137,8 @@ function checkAnswer(auto = false) {
     });
 
     // Show next button after answer checked
-     document.getElementById("submitButton").classList.add("hidden"); // Hide Submit
-     document.getElementById("nextButton").classList.remove("hidden"); // Show Next
+    document.getElementById("submitButton").classList.add("hidden"); // Hide Submit
+    document.getElementById("nextButton").classList.remove("hidden"); // Show Next
 }
 
 function rateGame() {
