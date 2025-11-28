@@ -184,44 +184,14 @@ You can find screenshots in the links below;
 
 ---
 
-## 🎯 Project Purpose
-This project was created to strengthen my front-end development skills — especially in **HTML**, **CSS**, and **JavaScript** — by building a small, fully functional application.  
-The main goal is to combine learning and fun through a clean and responsive interface.
+## Future Improvements
 
-### Objectives
-- Create an easy-to-use and accessible interface  
-- Implement a simple but effective quiz logic  
-- Demonstrate practical use of front-end web technologies  
+- Add ability for users to enter their name at start, and store high scores (localStorage or backend)
+- Add more question categories / dynamic question loading
+- Improve UI/UX design (animations, better feedback)
+- Add accessibility features (keyboard navigation, screen‑reader support)
+- Write automated tests
 
-### Target Audience
-- Anyone who enjoys trivia games  
-- Beginners learning web development  
-- Users looking for a lightweight, browser-based game  
-
-## 🎨 Design
-The interface follows a minimalist and user-friendly design philosophy. The layout is clean, responsive, and optimized for both desktop and mobile devices.
-
-![design](/assets/images/Screenshot%202025-10-22%20at%2011.50.10.png)
-
-## 🧱 Project Structure
-The application is organized as follows:
-- **index.html** — Main game page and start screen  
-- **script.js** — Game logic, scoring system, and interactions  
-- **style.css** — Visual design and responsive styling  
-- **assets/** — Images, icons, or other static resources  
-
-## ✅ Features
-- Clean and simple user interface  
-- One question displayed at a time  
-- “Next” button to move through questions  
-- Score calculated and shown at the end  
-- Planned: player name input and leaderboard  
-
-## 🛠 Technologies Used
-- HTML5  
-- CSS3  
-- JavaScript (ES6)  
-- *(Optional)* Bootstrap 
 
 # Credits
 ### Content
