@@ -14,7 +14,8 @@
 - [Usage](#usage)  
 - [Project Structure](#project-structure)  
 - [UX / Design & Wireframes](#ux--design--wireframes)  
-- [Testing & Validation](#testing--validation)  
+- [Testing & Validation](#testing--validation) 
+- [Bug Fixes](#bug-fixes) 
 - [Deployment](#deployment)  
 - [Screenshots](#screenshots)  
 - [Future Improvements](#future-improvements)  
@@ -135,6 +136,37 @@ CSS3: ✅ No major issues; responsive layout works on various screen sizes
 JavaScript (ES6): ✅ No console errors; works across modern browsers
 
 ---
+## Bug Fixes 
+
+1. Submit Allowed Without Selecting an Answer
+Issue: Users could click Submit without choosing any answer, leading to incorrect feedback such as “Time’s up!”
+Fix: Added input validation that displays an alert and prevents submission when no option is selected.
+2. "Finished" Message Displayed Prematurely
+Issue: The “Finished” title appeared even before the last question was completed.
+Fix: Hid the message until all questions are answered and the final score screen is shown.
+3. Rating Section Visible at the Wrong Time
+Issue: Rating stars and username input appeared at the beginning of the game.
+Fix: Rating section now only appears after the quiz is completed.
+4. Missing Restart and Home Navigation During Game
+Issue: Users could not return to the homepage or restart the quiz once it began.
+Fix: Added Start Again and Home Page buttons and connected them to new resetGame() and goHome() functions.
+5. Auto-Submit Timer Logic Error
+Issue: When the timer reached 0 without a selection, checkAnswer() produced incorrect behavior.
+Fix: Added a separate autoSubmitAnswer() function to correctly handle timeout and provide accurate feedback.
+6. New Question Not Resetting UI State
+Issue: Previous answers stayed highlighted or disabled when moving to the next question.
+Fix: Each new question now clears old labels, resets radio buttons, and hides/shows correct buttons.
+7. Game Not Starting After Recent Changes
+Issue: After adding new controls, the quiz stopped starting when clicking “Start Quiz”.
+Fix: Resolved DOM load order issues and ensured all elements are available before event listeners are attached.
+8. HTML Validation Errors (Trailing Slash)
+Issue: HTML5 validator flagged void elements with trailing slashes (<input />).
+Fix: Updated all void elements to HTML5-compliant form (<input>).
+9. Rate Button Did Not Validate Username
+Issue: Users could submit rating without entering a username.
+Fix: Added username .trim() validation before processing rating submission.
+
+---
 
 ## Deployment
 
@@ -193,7 +225,7 @@ You can find screenshots in the links below;
 - Write automated tests
 
 
-# Credits
+## Credits
 ### Content
 - Home page text: Google Fonts.
 
