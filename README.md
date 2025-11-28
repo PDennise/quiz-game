@@ -2,7 +2,7 @@
   <h4> QUIZ GAME </h4>
 </div>
 
-![device images](/assets/images/Screenshot%202025-10-22%20at%2011.45.57.png)
+![device images](/assets/images/devices.png)
 
 
 [Quiz Game](https://pdennise.github.io/quiz-game/) is a web-based trivia app designed to test users’ knowledge through multiple-choice questions. Players answer each question, move to the next one, and see their final score at the end. In future updates, users will be able to enter their name and save their results.
@@ -146,6 +146,41 @@ The project is deployed via **GitHub Pages**. The steps to deploy:
 
 
 Alternatively, you can deploy on any static hosting service (Netlify, Vercel, etc.) by pointing to index.html.
+
+---
+
+## Screenshots
+
+You can find screenshots in the links below; 
+
+### Game Screenshots
+
+- [Homepage Screenshot](/assets/images/game-home-page.png)
+
+- [Quiz Screen Screenshot](/assets/images/question-page.png)
+
+- [Correct Answer Screen](/assets/images/correct.png)
+
+- [Incorrect Answer Screen](/assets/images/incorrect.png)
+
+- [Times up! You didn't Answer Screen](/assets/images/invalid.png)
+
+- [Rate Alert Screen](/assets/images/rating-alert.png)
+
+- [Username Alert Screen](/assets/images/username-alert.png)
+
+- [Finished Screen](/assets/images/rates-username.png)
+
+
+### Test Screentshots
+
+- [HTML Validator](/assets/images/html-validator.png)
+
+- [CSS Validator](/assets/images/css-validator.png)
+
+- [JS Validator (JSHint)](/assets/images/jshint-validator.png)
+
+- [JS Validator Extra](/assets/images/js-validator.png)
 
 ---
 
